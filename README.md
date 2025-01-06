@@ -15,17 +15,17 @@ This formula generates a value between -1 and +1. Low reflectance in the red cha
 To use this script, import the `rasterioNDVI.py` module and call the `rasterioNDVI()` function with the paths to the NIR-band and red-band raster images given as parameters in addition to the desired output raster path. Please refer to the `demonstration.ipynb` file within this repository for a demonstration of using this module with included output examples.
 
 ```Python
-rasterioNDVI(NIR_path, red_path, output_path)
+rasterioNDVI(nir_path, red_path, output_path)
 ```
 
 Parameters:
-- `NIR_path: str` **Requires string**
+- `nir_path: str` **Requires string**
     - Directory path to the input NIR-band raster being used to calculate NDVI (including file extension).
-    - Depending on the directory this function is being called in, you can use the relative path prefix `./` like this: `./NIR.tif`
-        - Example: `'C:/absolute/path/to/NIR_band.tif'` or `./NIR_band.tif`
+    - Depending on the directory this function is being called in, you can use the relative path prefix `./` like this: `./nir.tif`
+        - Example: `'C:/absolute/path/to/nir_band.tif'` or `./nir_band.tif`
 - `red_path: str` **Requires string**
     - Directory path to the input red-band raster being used to calculate NDVI (including file extension).
-    - Depending on the directory this function is being called in, you can use the relative path prefix `./` like this: `./NIR.tif`
+    - Depending on the directory this function is being called in, you can use the relative path prefix `./` like this: `./red.tif`
         - Example: `'C:/absolute/path/to/red_band.tif'` or `./red_band.tif`
 - `output_path: str` **Requires string**
     - Directory path where the output NDVI raster image will be saved (including .tif file extension).
@@ -37,7 +37,7 @@ Usage example:
 # Generates an NDVI raster image from input NIR and red rasters using rasterioNDVI()
 import rasterioNDVI.py
 
-rasterioNDVI(NIR_path = "C:/data/AreaOfInterest/2024-01-01_NIR.tif",
+rasterioNDVI(nir_path = "C:/data/AreaOfInterest/2024-01-01_NIR.tif",
              red_path = "C:/data/AreaOfInterest/2024-01-01_red.tif",
              output_path = "C:/data/AreaOfInterest/2024-01-01_Output_NDVI.tif")
 

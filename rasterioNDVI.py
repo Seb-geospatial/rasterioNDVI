@@ -1,10 +1,11 @@
 # Import packages
 import rasterio
+import numpy as np
 
 # Define function to generate NDVI from input rasters
-def rasterioNDVI(NIR_path: str, red_path: str, output_path: str):
-    with rasterio.open(NIR_path) as src_NIR:
-        NIR_band = src_NIR.read(1)
+def rasterioNDVI(nir_path: str, red_path: str):
+    NIR = rasterio.open(nir_path)
 
-    with rasterio.open(red_path) as src_red:
-        red_band = src_red.read(1)
+    red = rasterio.open(red_path)
+
+rasterioNDVI(nir_path = './demo/data/NIR.tif', red_path = './demo/data/red.tif')
