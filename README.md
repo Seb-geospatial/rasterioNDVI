@@ -1,4 +1,4 @@
-# Rasterio-NDVI: A Tool for Easily Generating NDVI Rasters using Rasterio
+# rasterioNDVI: A Tool for Easily Generating NDVI Rasters using Rasterio
 
 This script utilizes the `rasterio` package to easily generate NDVI rasters using red and near-infrared (NIR) banded input rasters. The output NDVI rasters are saved as GeoTIFF images with in `.tif` format.
 
@@ -12,10 +12,10 @@ $\Large NDVI = \frac{(NIR - Red)}{(NIR + Red)}$
 This formula generates a value between -1 and +1. Low reflectance in the red channel and high reflectance in the NIR channel will yield a high NDVI value (healthy vegetation), while the inverse will result in a low NDVI value (unhealthy vegetation). Negative values typically represent non-vegetation such as water or rock.
 
 ## Usage
-To use this script, import the `rasterio-NDVI.py` module and call the `NDVI()` function with the paths to the NIR-band and red-band raster images given as parameters in addition to the desired output raster path. Please refer to the `demonstration.ipynb` file within this repository for a demonstration of using this module with included output examples.
+To use this script, import the `rasterioNDVI.py` module and call the `rasterioNDVI()` function with the paths to the NIR-band and red-band raster images given as parameters in addition to the desired output raster path. Please refer to the `demonstration.ipynb` file within this repository for a demonstration of using this module with included output examples.
 
 ```Python
-NDVI(NIR_path, red_path, output_path)
+rasterioNDVI(NIR_path, red_path, output_path)
 ```
 
 Parameters:
@@ -34,10 +34,10 @@ Parameters:
 
 Usage example:
 ```Python
-# The following code uses the NDVI() function to generate an NDVI raster image from input NIR and red rasters
-import rasterio-NDVI.py
+# Generates an NDVI raster image from input NIR and red rasters using rasterioNDVI()
+import rasterioNDVI.py
 
-NDVI(NIR_path = "C:/data/AreaOfInterest/2024-01-01_NIR.tif",
+rasterioNDVI(NIR_path = "C:/data/AreaOfInterest/2024-01-01_NIR.tif",
      red_path = "C:/data/AreaOfInterest/2024-01-01_red.tif",
      output_path = "C:/data/AreaOfInterest/2024-01-01_Output_NDVI.tif")
 
