@@ -38,7 +38,7 @@ Usage example:
 import rasterioNDVI.py
 
 rasterioNDVI(NIR_path = "C:/data/AreaOfInterest/2024-01-01_NIR.tif",
-     red_path = "C:/data/AreaOfInterest/2024-01-01_red.tif",
-     output_path = "C:/data/AreaOfInterest/2024-01-01_Output_NDVI.tif")
+             red_path = "C:/data/AreaOfInterest/2024-01-01_red.tif",
+             output_path = "C:/data/AreaOfInterest/2024-01-01_Output_NDVI.tif")
 
 ```
