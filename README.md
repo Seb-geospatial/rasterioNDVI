@@ -11,8 +11,6 @@ $\Large NDVI = \frac{(NIR - Red)}{(NIR + Red)}$
 
 This formula generates a value between -1 and +1. Low reflectance in the red channel and high reflectance in the NIR channel will yield a high NDVI value (healthy vegetation), while the inverse will result in a low NDVI value (unhealthy vegetation). Negative values typically represent non-vegetation such as water or rock.
 
-<img width=30% height=30% src="demo/data/ndvi_color.png"></a>
-
 ## Usage
 To use this script, simply run the `rasterioNDVI.py` script from the command-line as seen below and provide the paths to the input and output raster images as additional command-line arguments in the correct sequence as seen below. Please refer to the `demonstration.ipynb` file within this repository for a demonstration of using this script with included output examples.
 
