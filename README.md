@@ -36,7 +36,7 @@ Parameters:
 
 Usage example:
 ```Bash
-python ./rasterioNDVI.py ./demo/data/red_band_1.tif ./demo/data/NIR_band_1.tif ./demo/data/ndvi_1.tif
+python ./rasterioNDVI.py ./demo/data/NIR_band_1.tif ./demo/data/red_band_1.tif ./demo/data/ndvi_1.tif
 ```
 
 Additionally, the `subprocess` package can be used with the `subprocess.run()` command to run the above terminal command from within other python scripts (assuming the directory of the `rasterioNDVI.py` script is specified). This may be useful if you wish to automate the use of this script for batch processes.
@@ -45,5 +45,5 @@ Usage example:
 ```python
 import subprocess
 
-subprocess.run('python ./rasterioNDVI.py ./demo/data/red_band_1.tif ./demo/data/NIR_band_1.tif ./demo/data/ndvi_1.tif')
+subprocess.run('python ./rasterioNDVI.py ./demo/data/NIR_band_1.tif ./demo/data/red_band_1.tif ./demo/data/ndvi_1.tif')
 ```
