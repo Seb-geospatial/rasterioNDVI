@@ -47,3 +47,6 @@ import subprocess
 
 subprocess.run('python ./rasterioNDVI.py ./demo/data/NIR_band_1.tif ./demo/data/red_band_1.tif ./demo/data/ndvi_1.tif')
 ```
+
+## To-Do
+- Add functionality for command-line argument keywords using `argparse` so that input and output path arguments can be given in any order
